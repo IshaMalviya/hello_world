@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+clrscr();
+int i,a[100],n,num,flag=0;
+
+printf(" Isha Malviya");
+printf("\n 0801IT191034");
+
+printf("\n Enter size of array : ");
+scanf("%d",&n);
+ printf("\n Enter %d elements in the array : ",n);
+ for(i=0;i<n;i++)
+ {
+ scanf("%d",&a[i]);
+ }
+ printf("\n Array : ");
+ for(i=0;i<n;i++)
+ {
+ printf("\t%d",a[i]);
+ }
+ printf(" \n Enter Number which is to be searched :" );
+ scanf("%d",&num);
+ printf("\n Using Linear searching ");
+ for(i=0;i<n;i++)
+ {
+ if(a[i]==num)
+ {
+ flag=i+1;
+ break;
+ }
+ else
+ flag =0;
+ }
+ if (flag!=0)
+ {
+ printf("\nNumber found at location %d\n",flag);
+ }
+ else
+ {
+ printf("\n Number not found     ");
+ }
+
+ getch();
+ return 0;
+	 }
